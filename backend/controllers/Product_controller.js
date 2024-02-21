@@ -44,7 +44,14 @@ const addProduct = async(req,res)=>{
             images: req.body.images,
             quantity: req.body.quantity,
             wishlisted_user_count: 0,
-            carted_user_count: 0
+            carted_user_count: 0,
+            rating: {
+                fivestarCnt:0,
+                fourStarCnt:0,
+                threeStarCnt:0,
+                twoStarCnt:0,
+                oneStartCnt:0
+            }
         })
         await product.save();
         res.send(product);

@@ -12,7 +12,14 @@ const ProductSchema = new mongoose.Schema({
     quantity: Number,
     category:String,
     wishlisted_user_count: Number,
-    carted_user_count: Number
+    carted_user_count: Number,
+    rating:{
+        fivestarCnt: Number,
+        fourStarCnt: Number,
+        threeStarCnt: Number,
+        twoStarCnt: Number,
+        oneStartCnt: Number
+    }
 })
 
 const Product = mongoose.model('Product',ProductSchema);

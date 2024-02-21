@@ -9,7 +9,7 @@ const ReviewSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Product'
     },
-    rating: Number,
+    rating:Number,
     review: String,
     review_date: String
 })
